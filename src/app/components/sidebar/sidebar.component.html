@@ -1,7 +1,7 @@
 <aside class="sidebar">
   <ul class="menu-list">
     <li>
-      <a routerLink="/practicantes" routerLinkActive="active">
+      <a routerLink="/practicantes" routerLinkActive="active" #rla="routerLinkActive" [class.active]="rla.isActive">
         <span class="active-indicator"></span>
         <ion-icon name="people-outline"></ion-icon>
         <span class="label">Practicantes</span>

@@ -1,0 +1,114 @@
+.filtros {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.tabs {
+  margin-bottom: 1rem;
+}
+
+.tabs button.active {
+  font-weight: bold;
+  background-color: #e0e0e0;
+}
+
+/* Tabla scrollable */
+.table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo general de tabla */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1200px; /* Fuerza scroll si pantalla es estrecha */
+  background-color: #fff;
+}
+
+th, td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* Estados de práctica */
+.estado-habilitado {
+  color: green;
+  font-weight: bold;
+}
+
+.estado-inhabilitado {
+  color: red;
+  font-weight: bold;
+}
+
+/* Botón editar */
+.edit-btn {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  background-color: #003263;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.edit-btn:hover {
+  background-color: #00509e;
+}
+
+.paginador-circular {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.paginador-circular button,
+.paginador-circular span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #003264;
+  background-color: white;
+  color: #003264;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.paginador-circular button:hover:not(:disabled) {
+  background-color: #003264;
+  color: white;
+}
+
+.paginador-circular button.active {
+  background-color: #08C1B8;
+  color: white;
+  border-color: #08C1B8;
+}
+
+.paginador-circular button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.paginador-circular span {
+  border: none;
+  cursor: default;
+}

@@ -168,3 +168,7 @@
     display: none;
   }
 }
+
+.active-indicator {
+  pointer-events: none; /* 👈 Esto permite que los clics pasen al <a> */
+}
