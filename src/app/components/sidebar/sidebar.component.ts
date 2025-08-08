@@ -1,11 +1,12 @@
 import { Component, Input, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
+  imports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SidebarComponent {
@@ -18,4 +19,3 @@ export class SidebarComponent {
     this.router.navigate(['/login']);
   }
 }
-

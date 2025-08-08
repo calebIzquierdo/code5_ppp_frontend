@@ -1,0 +1,197 @@
+/* ====================== GENERAL ====================== */
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container-practicantes {
+  background-color: #edf1f7;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+/* ====================== HEADER ====================== */
+.header-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-container {
+  width: 40px;
+  height: 40px;
+  background-color: #003263;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container ion-icon {
+  font-size: 24px;
+  color: white;
+  filter: drop-shadow(0 0 0 white) drop-shadow(0 0 0 white);
+}
+
+.header-title {
+  margin: 0;
+  font-weight: 600;
+  color: #003263;
+  font-size: 16px;
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.btn-refresh {
+  background-color: transparent;
+  border: 1.5px solid #003263;
+  color: #003263;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-refresh ion-icon {
+  font-size: 20px;
+  filter: drop-shadow(0 0 0 white) drop-shadow(0 0 0 white);
+}
+
+
+/* ====================== FILTROS ====================== */
+.filter-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-item label,
+.filter-button .filter-label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #7f8c8d;
+  margin-bottom: 0.2rem;
+}
+
+.filter-item select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #f4f6fa;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.filter-item select:focus {
+  outline: none;
+  border: 1px solid #003263;
+  box-shadow: 0 0 0 1px #003263;
+  background-color: #f4f6fa;
+}
+
+.filter-button {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.filter-button button {
+  background-color: #003263;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-button ion-icon {
+  font-size: 16px;
+  filter: drop-shadow(0 0 0 white) drop-shadow(0 0 0 white);
+}
+
+
+/* ====================== TABS ====================== */
+.tabs {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.tabs span {
+  position: relative;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #cfd8ed;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tabs span ion-icon {
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.tabs .active {
+  color: #003263;
+  font-weight: bold;
+}
+
+.tabs .active ion-icon {
+  color: #003263;
+}
+
+.tabs .active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fdbd0f;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,66 @@
+<!-- ====================== HEADER - Título e ícono ====================== -->
+<div class="header-card">
+  <div class="header-left">
+    <div class="icon-container">
+      <ion-icon name="people-outline"></ion-icon>
+    </div>
+    <div>
+      <h3 class="header-title">Administrar Practicantes</h3>
+      <p class="header-subtitle">Inicio / Practicantes</p>
+    </div>
+  </div>
+  <button class="btn-refresh" (click)="refresh()">
+    <ion-icon name="reload-outline"></ion-icon> Actualizar
+  </button>
+</div>
+
+<!-- ====================== FILTROS - E.P., Semestre, Ciclo ====================== -->
+<div class="filter-card">
+  <div class="filters">
+    <div class="filter-item">
+      <label>Escuela Profesional</label>
+      <select>
+        <option>Selecciona E.P.</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Semestre</label>
+      <select>
+        <option>2025-2</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Ciclo</label>
+      <select>
+        <option>1 ciclo</option>
+      </select>
+    </div>
+    <div class="filter-button">
+      <label class="filter-label">Filtro de búsqueda</label>
+      <button>
+        <ion-icon name="funnel-outline"></ion-icon> Aplicar búsqueda
+      </button>
+    </div>
+  </div>
+
+  <!-- ====================== TABS - Practicantes / Horas ====================== -->
+  <div class="tabs">
+    <span [class.active]="selectedTab === 'tabla'" (click)="switchTab('tabla')">
+      <ion-icon name="people-outline"></ion-icon> Practicantes
+    </span>
+    <span [class.active]="selectedTab === 'horas'" (click)="switchTab('horas')">
+      <ion-icon name="time-outline"></ion-icon> Horas
+    </span>
+  </div>
+</div>
+
+<!-- ====================== CONTENIDO DINÁMICO SEGÚN TAB ====================== -->
+<div class="contenido-tab">
+  <app-tabla-practicantes
+    *ngIf="selectedTab === 'tabla'"
+    [students]="students"
+    [loading]="loading">
+  </app-tabla-practicantes>
+
+  <app-horas-practicantes *ngIf="selectedTab === 'horas'"></app-horas-practicantes>
+</div>
