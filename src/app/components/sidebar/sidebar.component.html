@@ -1,35 +1,35 @@
 <aside class="sidebar">
   <ul class="menu-list">
-    <li>
-      <a routerLink="/practicantes" routerLinkActive="active" #rla="routerLinkActive" [class.active]="rla.isActive">
+    <li routerLinkActive="active">
+      <a [routerLink]="'/practicantes'">
         <span class="active-indicator"></span>
         <ion-icon name="people-outline"></ion-icon>
         <span class="label">Practicantes</span>
       </a>
     </li>
-    <li>
-      <a routerLink="/convenios" routerLinkActive="active">
+    <li routerLinkActive="active">
+      <a [routerLink]="'/convenios'">
         <span class="active-indicator"></span>
         <ion-icon name="business"></ion-icon>
         <span class="label">Solicitudes Convenios</span>
       </a>
     </li>
-    <li>
-      <a routerLink="/empresas" routerLinkActive="active">
+    <li routerLinkActive="active">
+      <a [routerLink]="'/empresas'">
         <span class="active-indicator"></span>
         <ion-icon name="briefcase-outline"></ion-icon>
         <span class="label">Empresas</span>
       </a>
     </li>
-    <li>
-      <a routerLink="/tipos" routerLinkActive="active">
+    <li routerLinkActive="active">
+      <a [routerLink]="'/tipos'">
         <span class="active-indicator"></span>
         <ion-icon name="document-outline"></ion-icon>
         <span class="label">Tipo de Práctica</span>
       </a>
     </li>
-    <li>
-      <a routerLink="/seguimiento" routerLinkActive="active">
+    <li routerLinkActive="active">
+      <a [routerLink]="'/seguimiento'">
         <span class="active-indicator"></span>
         <ion-icon name="file-tray-full-outline"></ion-icon>
         <span class="label">Seguimientos</span>
@@ -43,6 +43,4 @@
       <ion-icon name="log-out-outline"></ion-icon>
     </button>
   </div>
-
 </aside>
-

@@ -1,20 +1,26 @@
 import { Routes } from '@angular/router';
-import { MainLayoutComponent } from './components/layouts/main-layout.component';
-import { HomeComponent } from './pages/home/home.component';
-import { PracticasComponent } from './pages/practica/practica.component';
 
 export const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: '',
-    component: MainLayoutComponent,
+    loadComponent: () =>
+      import('./components/layouts/main-layout.component').then(m => m.MainLayoutComponent),
     children: [
-      { path: 'home', component: HomeComponent },
-      { path: 'practicantes', component: PracticasComponent } // ✅ Aquí agregas la ruta
-    ]
-  }
+      {
+        path: 'home',
+        loadComponent: () =>
+          import('./pages/home/home.component').then(m => m.HomeComponent),
+      },
+      {
+        path: 'practicantes',
+        loadComponent: () =>
+          import('./pages/practicantes/practicantes.component').then(m => m.PracticantesComponent),
+      }
+    ],
+  },
 ];

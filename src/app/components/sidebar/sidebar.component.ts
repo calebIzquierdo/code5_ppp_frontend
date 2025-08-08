@@ -6,8 +6,8 @@ import { Router, RouterModule } from '@angular/router';
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [RouterModule]
+  imports: [RouterModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SidebarComponent {
   @Input() collapsed: boolean = false;
@@ -19,4 +19,3 @@ export class SidebarComponent {
     this.router.navigate(['/login']);
   }
 }
-

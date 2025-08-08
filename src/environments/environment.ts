@@ -1,4 +1,3 @@
-
 export const environment = {
   production: false,
   moduleId: 1791,
@@ -7,4 +6,3 @@ export const environment = {
   },
   shellApp: `http://localhost:4200`,
 };
-
